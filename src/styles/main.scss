@@ -1,5 +1,7 @@
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
+@use 'plans';
 
 
 @font-face {
@@ -7,6 +9,7 @@
     src: url(../../assets/fonts/Avenir-Regular.woff2);
     font-weight: 400;
 }
+
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Bold.woff2);
@@ -18,12 +21,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 
 body {
     background-color: variaveis.$CorDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 
@@ -66,4 +69,18 @@ body {
 
 .title--small {
     @include title(28px);
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$CorTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
