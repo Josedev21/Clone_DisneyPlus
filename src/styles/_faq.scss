@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .faq {
     padding: 5.6vw;
 
@@ -7,6 +9,9 @@
     }
 
     &__questions{
+
+        list-style: none;
+
         &__item {
             background-color: #13151d;
             margin-bottom: 16px;
@@ -34,6 +39,24 @@
             &__answer{
                 height: 0;
                 overflow: hidden;
+                padding: 0 24px;
+                transition: height, .5s ease;
+                
+                a {
+                    color: variaveis.$CorTextoSecundario;
+                }
+
+                &__list {
+                    list-style: disc;
+                    width: 100%;
+                    padding-left: 40px;
+                    margin-top: 16px;
+
+                    li {
+                        margin-bottom: 20px;
+                    }
+
+                }
             }
 
 
@@ -44,7 +67,8 @@
 
                 .faq__questions__item__answer {
                     height: auto;
-                    padding: 24px;
+                    padding-bottom: 24px;
+                    transition: height, .5s ease;
                 }
             }
         }
